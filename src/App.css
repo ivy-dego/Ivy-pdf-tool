@@ -1,0 +1,340 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #111111;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+/* =========================
+   MAIN PAGE
+   ========================= */
+
+.app {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+
+  padding: 75px 35px 40px;
+
+  /* No border or background box around the whole application */
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* =========================
+   TITLE
+   ========================= */
+
+.app-header {
+  text-align: center;
+
+  /* Creates distance between title area and tool boxes */
+  margin-bottom: 65px;
+}
+
+.app-header h1 {
+  margin: 0 0 14px;
+
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.05;
+
+  color: #050505;
+
+  letter-spacing: -1.5px;
+}
+
+.app-header p {
+  margin: 0;
+
+  font-size: 19px;
+  font-weight: 400;
+
+  color: #5f6670;
+}
+
+/* =========================
+   MERGE + SPLIT AREA
+   ========================= */
+
+.tools-container {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 35px;
+
+  align-items: stretch;
+
+  /* No surrounding rectangle */
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Only Merge and Split get boxes */
+
+.tool-box {
+  background: #ffffff;
+
+  border: 1px solid #d7dce2;
+  border-radius: 12px;
+
+  padding: 34px;
+
+  min-height: 440px;
+
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.tool-box section {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* =========================
+   TOOL HEADINGS
+   ========================= */
+
+.tool-box h2 {
+  margin: 0 0 12px;
+
+  color: #111111;
+
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.tool-box h3 {
+  margin: 28px 0 6px;
+
+  color: #171717;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.tool-box p {
+  color: #626a75;
+
+  line-height: 1.5;
+}
+
+/* =========================
+   FILE INPUT
+   ========================= */
+
+input[type="file"] {
+  display: block;
+
+  width: 100%;
+
+  margin: 20px 0;
+
+  padding: 12px;
+
+  border: 1px solid #d9dde3;
+  border-radius: 8px;
+
+  background: #fafafa;
+
+  color: #222222;
+}
+
+/* =========================
+   PAGE RANGE INPUT
+   ========================= */
+
+input[type="text"] {
+  display: block;
+
+  width: 100%;
+
+  margin: 16px 0 8px;
+
+  padding: 14px;
+
+  border: 1px solid #ccd2d9;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #111111;
+
+  font-size: 16px;
+}
+
+input[type="text"]:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+
+  border-color: transparent;
+}
+
+/* =========================
+   MERGE ORDER
+   ========================= */
+
+ol {
+  padding-left: 28px;
+  margin-top: 18px;
+}
+
+ol li {
+  margin-bottom: 10px;
+
+  padding: 11px 10px;
+
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+
+  background: #fafafa;
+}
+
+ol li span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #222222;
+
+  font-weight: 600;
+}
+
+/* =========================
+   SMALL BUTTONS
+   ========================= */
+
+button {
+  margin: 4px;
+
+  padding: 9px 14px;
+
+  border: 1px solid #d0d5db;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #202020;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    transform 0.1s ease;
+}
+
+button:hover:not(:disabled) {
+  background: #f2f4f6;
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* =========================
+   MAIN DOWNLOAD BUTTONS
+   ========================= */
+
+section > button:last-of-type {
+  margin-top: 22px;
+  margin-left: 0;
+
+  padding: 13px 24px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+section > button:last-of-type:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+/* =========================
+   FOOTER / PRIVACY
+   ========================= */
+
+.footer {
+  margin-top: 45px;
+
+  text-align: center;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 800px) {
+  .app {
+    padding: 45px 18px 30px;
+  }
+
+  .app-header {
+    margin-bottom: 40px;
+  }
+
+  .app-header h1 {
+    font-size: 38px;
+  }
+
+  .app-header p {
+    font-size: 16px;
+  }
+
+  .tools-container {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .tool-box {
+    min-height: auto;
+
+    padding: 24px;
+  }
+}
